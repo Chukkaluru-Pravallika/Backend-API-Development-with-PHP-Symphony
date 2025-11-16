@@ -6,7 +6,16 @@ A robust backend API built with PHP Symfony featuring JWT authentication, email 
 
 | Feature | Technology |
 |---------|------------|
+|Language| PHP 8.x |
+|Web Server | PHP built-in server / Nginx / Apache (depending on deployment) |
 | Framework | Symfony 6+ |
+|ORM | Doctrine ORM |
+|Dependency Manager | Composer |
+|Configuration Format |	YAML / ENV files |
+|API Type |	REST API |
+|Security |	Symfony Security Component / JWT (if implemented) |
+|Migrations | Doctrine Migrations |
+|Environment |	.env, .env.dev |
 | Authentication | JWT (lexikJWTAuthenticationBundle) |
 | Database | MySQL + Doctrine ORM |
 | Mail Sending | Symfony Mailer |
@@ -47,6 +56,10 @@ php bin/console lexik:jwt:generate-keypair
 php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
+```
+## base_url
+```
+http://localhost:8000
 ```
 
 ## 6. Run the server
